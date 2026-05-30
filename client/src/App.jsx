@@ -7,16 +7,16 @@ function App() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      const { data } = await axios.get(
-        "http://localhost:5000/api/products"
-      );
+  const fetchProducts = async () => {
+    const { data } = await axios.get(
+      "https://ecommerce-project-wj6g.onrender.com/api/products"
+    );
 
-      setProducts(data);
-    };
+    setProducts(data);
+  };
 
-    fetchProducts();
-  }, []);
+  fetchProducts();
+}, []);
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
